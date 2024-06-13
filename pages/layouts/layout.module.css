@@ -1,0 +1,16 @@
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.layoutContainer {
+    width: 70%;
+}
+.header{
+    width: 100%;
+}
+.body{
+    width: 100%;
+}

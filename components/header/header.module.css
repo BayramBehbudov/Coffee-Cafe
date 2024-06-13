@@ -1,0 +1,38 @@
+.headerContainer {
+    height: 40px;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.iconsSection {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 20px;
+    color: rgb(101, 101, 211);
+
+    .icon {
+        cursor: pointer;
+    }
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+
+    gap: 30px;
+
+    li {
+        font-weight: 700;
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+        cursor: pointer;
+    }
+
+    li:hover {
+        color: orange;
+    }
+}
