@@ -15,7 +15,7 @@ const CardPage = () => {
       <Table />
       <div style={btnsStyle}>
         <Button text="Continue Shopping" path="/products" />
-        <Button text="Complete Shopping"  />
+        <Button text="Complete Shopping" />
       </div>
     </Layout>
   );

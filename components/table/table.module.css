@@ -34,6 +34,12 @@ tbody td {
     width: fit-content;
 }
 
+tbody td:first-child {
+    min-width: 3px;
+    width: 20px;
+    text-align: center;
+}
+
 
 tbody tr:last-of-type {
     border-bottom: 2px solid #009879;
@@ -45,7 +51,7 @@ tfoot td {
     color: #ffffff;
 }
 
-.counter {
+.section {
     display: flex;
     align-items: center;
     justify-content: start;
@@ -68,4 +74,19 @@ tfoot td {
     padding: 10% 0;
     text-align: center;
     font-size: xx-large;
+}
+
+.deleteProduct {
+    font-size: 15px;
+    transition: all 0.3s;
+    color: red;
+    cursor: pointer;
+}
+
+.deleteProduct:hover {
+    transform: scale(1.1);
+}
+
+.deleteProduct:active {
+    transform: scale(1.1);
 }

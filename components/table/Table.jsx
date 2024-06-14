@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Context } from "../../src/OrderContext.jsx";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
+import { faMinus, faPlus, faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import style from "./table.module.css";
 
 const ProductTable = () => {
@@ -15,11 +15,29 @@ const ProductTable = () => {
     );
   };
 
+  function deleteProduct(index) {
+    updatedProducts.splice(index, 1);
+    setProducts(updatedProducts);
+  }
+
+  function decrement(index) {
+    if (updatedProducts[index].count > 1) {
+      updatedProducts[index].count -= 1;
+      setProducts(updatedProducts);
+    }
+  }
+
+  function increment(index) {
+    updatedProducts[index].count += 1;
+    setProducts(updatedProducts);
+  }
+
   if (products.length > 0) {
     return (
       <table>
         <thead>
           <tr>
+            <th></th>
             <th>Product Sku</th>
             <th>Product Name</th>
             <th>Count</th>
@@ -30,17 +48,23 @@ const ProductTable = () => {
         <tbody>
           {products.map((product, index) => (
             <tr key={product.sku}>
+              <td>
+                <FontAwesomeIcon
+                  icon={faTrashCan}
+                  onClick={() => {
+                    deleteProduct(index);
+                  }}
+                  className={style.deleteProduct}
+                />
+              </td>
               <td>{product.sku}</td>
               <td>{product.title}</td>
-              <td className={style.counter}>
+              <td className={style.section}>
                 <FontAwesomeIcon
                   icon={faMinus}
                   className={style.countSelector}
                   onClick={() => {
-                    if (updatedProducts[index].count > 0) {
-                      updatedProducts[index].count -= 1;
-                      setProducts(updatedProducts);
-                    }
+                    decrement(index);
                   }}
                 />
                 {product.count}
@@ -48,8 +72,7 @@ const ProductTable = () => {
                   icon={faPlus}
                   className={style.countSelector}
                   onClick={() => {
-                    updatedProducts[index].count += 1;
-                    setProducts(updatedProducts);
+                    increment(index);
                   }}
                 />
               </td>
@@ -60,7 +83,7 @@ const ProductTable = () => {
         </tbody>
         <tfoot>
           <tr>
-            <td colSpan="4">Total</td>
+            <td colSpan="5">Total</td>
             <td>{getTotal()} USD</td>
           </tr>
         </tfoot>
