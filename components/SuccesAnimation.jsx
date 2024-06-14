@@ -18,12 +18,11 @@ const succesIcon = {
 };
 
 const SuccesAnimation = ({ text }) => {
-  
   return (
     <div style={succesIcon}>
       <Lottie
         animationData={SuccessAnimation}
-        style={{ width: 150, height: 150, }}
+        style={{ width: 150, height: 150 }}
       />
       {text}
     </div>

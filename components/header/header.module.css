@@ -14,8 +14,20 @@
     font-size: 20px;
     color: rgb(101, 101, 211);
 
-    .icon {
+    .iconContainer {
         cursor: pointer;
+        display: flex;
+        position: relative;
+    }
+
+    .shopCardCount {
+        color: red;
+        font-size: 14px;
+        font-weight: bold;
+        position: absolute;
+        background: transparent;
+        top: 10px;
+        right: -10px;
     }
 }
 

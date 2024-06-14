@@ -3,6 +3,7 @@ import Products from "../pages/products/Products.jsx";
 import About from "../pages/about/About.jsx";
 import Delivery from "../pages/delivery/Delivery.jsx";
 import FeedBack from "../pages/feedback/FeedBackPage.jsx";
+import CardPage from "../pages/cardPage/CardPage.jsx";
 
 export default [
   {
@@ -24,5 +25,9 @@ export default [
   {
     path: "/feedback",
     element: <FeedBack />,
+  },
+  {
+    path: "/card",
+    element: <CardPage />,
   },
 ];
