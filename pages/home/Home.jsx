@@ -3,7 +3,6 @@ import style from "./home.module.css";
 import Layout from "../layouts/Layout";
 import { useNavigate } from "react-router-dom";
 
-
 const Home = () => {
   const navigate = useNavigate();
 
@@ -26,7 +25,13 @@ const Home = () => {
             >
               Order Now
             </button>
-            <button>Feedback</button>
+            <button
+              onClick={() => {
+                navigate("/feedback");
+              }}
+            >
+              Feedback
+            </button>
           </div>
         </div>
         <div className={style.rightSection}>

@@ -18,6 +18,7 @@ const succesIcon = {
 };
 
 const SuccesAnimation = ({ text }) => {
+  
   return (
     <div style={succesIcon}>
       <Lottie

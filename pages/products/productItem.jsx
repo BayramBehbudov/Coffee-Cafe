@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import style from "./products.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
@@ -7,6 +7,16 @@ import SuccesAnimation from "../../components/SuccesAnimation";
 const productItem = ({ product }) => {
   const [total, setTotal] = useState(0);
   const [order, setOrder] = useState(false);
+
+  useEffect(() => {
+    if (order) {
+      const timer = setTimeout(() => {
+        setOrder(false);
+      }, 1550);
+
+      return () => clearTimeout(timer);
+    }
+  }, [order]);
 
   return (
     <div className={style.productCard}>
@@ -41,7 +51,7 @@ const productItem = ({ product }) => {
         </div>
         <p>${total}</p>
       </div>
-      {order && <SuccesAnimation text={"Your order has been received"}/>}
+      {order && <SuccesAnimation text={"Your order has been received"} />}
     </div>
   );
 };
