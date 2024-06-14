@@ -13,7 +13,7 @@ const Header = () => {
     <div className={style.headerContainer}>
       <div>
         <img
-          src="../img/headerIcon.svg"
+          src="../../img/headerIcon.svg"
           onClick={() => navigate("/")}
           style={{ cursor: "pointer" }}
         />
