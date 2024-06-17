@@ -11,7 +11,7 @@ const productItem = ({ product }) => {
   const { setProduct } = useContext(Context);
 
   function productOrdered() {
-    count > 0 && ((product.count = count), setProduct(product))
+    count > 0 && ((product.count = count), setProduct(product));
   }
 
   useEffect(() => {
