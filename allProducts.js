@@ -2,7 +2,7 @@ export default [{
     title: "Sendwich",
     sku: "Kla484",
     price: 19,
-    img: "../../img/Sendwich.jpg"
+    img: "../img/Sendwich.jpg"
 }, {
     title: "Hot Milk",
     sku: "aOla89",
