@@ -16,7 +16,7 @@ const Header = () => {
           src="../../img/headerIcon.svg"
           onClick={() => navigate("/")}
           style={{ cursor: "pointer" }}
-        />
+        ></img>
       </div>
       <div>
         <Navbar />
