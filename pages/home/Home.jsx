@@ -35,7 +35,7 @@ const Home = () => {
           </div>
         </div>
         <div className={style.rightSection}>
-          <img src="../../img/bodyIcon.svg" alt="" />
+          <img src="/img/bodyIcon.svg" alt="" />
         </div>
       </div>
     </Layout>
