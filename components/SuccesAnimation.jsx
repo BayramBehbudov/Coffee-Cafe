@@ -1,4 +1,4 @@
-import SuccessAnimation from "../public/succes-icon.json";
+import SuccessAnimation from "../public/img/succes-icon.json";
 import Lottie from "lottie-react";
 
 const succesIcon = {
