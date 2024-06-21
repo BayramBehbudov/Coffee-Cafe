@@ -1,4 +1,4 @@
-import SuccessAnimation from "/img/succes-icon.json";
+// import SuccessAnimation from "/img/succes-icon.json";
 import Lottie from "lottie-react";
 
 const succesIcon = {
@@ -21,7 +21,7 @@ const SuccesAnimation = ({ text }) => {
   return (
     <div style={succesIcon}>
       <Lottie
-        animationData={SuccessAnimation}
+        animationData="/img/succes-icon.json"
         style={{ width: 150, height: 150 }}
       />
       {text}
